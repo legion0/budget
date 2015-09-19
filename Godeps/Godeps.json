@@ -1,6 +1,6 @@
 {
 	"ImportPath": "github.com/heroku/go-getting-started",
-	"GoVersion": "go1.5",
+	"GoVersion": "go1.5.1",
 	"Packages": [
 		"./..."
 	],
@@ -17,6 +17,15 @@
 		{
 			"ImportPath": "github.com/mattn/go-colorable",
 			"Rev": "40e4aedc8fabf8c23e040057540867186712faa5"
+		},
+		{
+			"ImportPath": "github.com/russross/blackfriday",
+			"Comment": "v1.2-80-g8cec3a8",
+			"Rev": "8cec3a854e68dba10faabbe31c089abf4a3e57a6"
+		},
+		{
+			"ImportPath": "github.com/shurcooL/sanitized_anchor_name",
+			"Rev": "244f5ac324cb97e1987ef901a0081a77bfd8e845"
 		},
 		{
 			"ImportPath": "golang.org/x/net/context",

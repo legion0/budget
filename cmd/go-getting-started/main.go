@@ -6,6 +6,7 @@ import (
 	"os"
 
 	"github.com/heroku/go-getting-started/Godeps/_workspace/src/github.com/gin-gonic/gin"
+	"github.com/heroku/go-getting-started/Godeps/_workspace/src/github.com/russross/blackfriday"
 )
 
 func main() {
@@ -22,6 +23,9 @@ func main() {
 
 	router.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.tmpl.html", nil)
+	})
+	router.GET("/mark", func(c *gin.Context) {
+		c.String(http.StatusOK, string(blackfriday.MarkdownBasic([]byte("**hi!**"))))
 	})
 
 	router.Run(":" + port)
