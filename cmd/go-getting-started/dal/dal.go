@@ -3,8 +3,8 @@ package dal
 import (
 	"database/sql"
 	"fmt"
-	_ "github.com/lib/pq"
-	"gopkg.in/gorp.v1"
+	_ "github.com/heroku/go-getting-started/Godeps/_workspace/src/github.com/lib/pq"
+	"github.com/heroku/go-getting-started/Godeps/_workspace/src/gopkg.in/gorp.v1"
 	"os"
 	"time"
 )
