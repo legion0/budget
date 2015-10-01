@@ -1,0 +1,27 @@
+<div ng-controller="EntryController">
+	<md-input-container flex>
+		<label>What ?</label>
+		<input ng-model="name">
+	</md-input-container>
+	<md-input-container flex>
+		<label>How Much ?</label>
+		<input
+			type="number"
+			ng-model="price"
+			ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+			step="0.01"
+		>
+	</md-input-container>
+
+	Id: <span ng-bind="book.id"></span>
+	<br/>
+	Name:<input type="text" ng-model="book.name" />
+	<br/>
+	Author: <input type="text" ng-model="book.author" />
+	<br/>
+	Is Available: <span ng-bind="book.isAvailable() ? 'Yes' : 'No' "></span>
+	<br/>
+	<button ng-click="book.delete()">Delete</button>
+	<br/>
+	<button ng-click="book.update()">Update</button>
+</div>
