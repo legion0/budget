@@ -1,14 +1,14 @@
 angular.module('entryDirective', [])
+.controller('EntryController', ['$scope', 'Entry', function($scope, Entry) {  
+    $scope.entry = new Entry();
+}])
 .directive('budgetEntry', function() {
 	return {
 		restrict: 'E',
 		scope: false,
 		templateUrl: '/components/entry/view.html'
 	}
-})
-.controller('EntryController', ['$scope', 'Entry', function($scope, Entry) {  
-    $scope.entry = new Entry();
-}]);;
+});
 
 // model
 app.factory('Entry', ['$http', function($http) {  
